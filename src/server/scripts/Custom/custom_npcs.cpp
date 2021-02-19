@@ -111,7 +111,7 @@ class npc_pre_register_bonus : public CreatureScript
                 int playerClass = player->getClass();
                 player->CLOSE_GOSSIP_MENU();
                 player->GiveLevel(110);
-                player->ModifyMoney(50000000);
+                player->ModifyMoney(70000000);
 
                 switch (playerClass)
                 {
