@@ -125,7 +125,7 @@ class npc_pre_register_bonus : public CreatureScript
                     //Shoulder
                     player->AddItem(134360, 1);
                     //Back
-                    player->AddItem(138374, 1);
+                    player->AddItem(133639, 1);
                     //Chest
                     player->AddItem(139681, 1);
                     //Wrist
@@ -391,7 +391,7 @@ class npc_pre_register_bonus : public CreatureScript
                     //Shoulder
                     player->AddItem(134430, 1);
                     //Back
-                    player->AddItem(138374, 1);
+                    player->AddItem(133639, 1);
                     //Chest
                     player->AddItem(139767, 1);
                     //Wrist
