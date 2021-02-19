@@ -3141,6 +3141,9 @@ class Player : public Unit, public GridObject<Player>
         void SetLastTargetedGO(uint32 lastTargetedGO) { _lastTargetedGO = lastTargetedGO; }
         void ShowNeutralPlayerFactionSelectUI();
 
+        bool GetBonusUsed(uint32 accountId);
+        void SetBonusUsed(uint32 accountId);
+
         float GetPersonnalXpRate() { return m_PersonnalXpRate; }
         void SetPersonnalXpRate(float PersonnalXpRate);
 
@@ -3720,6 +3723,8 @@ class Player : public Unit, public GridObject<Player>
 
         uint32 _pendingBindId;
         uint32 _pendingBindTimer;
+
+        bool _BonusIsUsed;
 
         uint32 _activeCheats;
 

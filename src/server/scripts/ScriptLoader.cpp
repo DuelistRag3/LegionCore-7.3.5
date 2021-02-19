@@ -25,6 +25,9 @@ void AddSC_battleground_shado_pan();
 
 //customs
 void AddSC_CustomStartups();
+void AddSC_solocraft();
+void AddSC_worldchat();
+void AddSC_custom_npcs();
 
 //battlepay
 void AddSC_BattlePay_Services();
@@ -2605,5 +2608,8 @@ void AddCustomScripts()
 {
 #ifdef SCRIPTS
     AddSC_CustomStartups();
+    AddSC_solocraft();
+    AddSC_worldchat();
+    AddSC_custom_npcs();
 #endif
 }

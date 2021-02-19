@@ -39247,3 +39247,36 @@ std::string Player::GetShortDescription() const
     oss << GetName() << ":" << GetGUIDLow() << ":" << GetSession()->GetAccountId() << "@" << GetSession()->GetRemoteAddress().c_str() << "]";
     return oss.str();
 }
+
+bool Player::GetBonusUsed(uint32 accountId)
+{
+    PreparedStatement* statement = LoginDatabase.GetPreparedStatement(LOGIN_SEL_BONUS_USED);
+    statement->setUInt32(0, accountId);
+    PreparedQueryResult result = LoginDatabase.Query(statement);
+
+    if (result)
+    {
+        Field* bonusFields = result->Fetch();
+
+        uint8 bonusUsed = bonusFields[0].GetUInt8();
+
+        if (bonusUsed == 1)
+            return false;
+        if (bonusUsed == 0)
+            return true;
+    }
+    if (!result)
+    {
+        return false;
+    }
+}
+
+void Player::SetBonusUsed(uint32 accountId)
+{
+    PreparedStatement* statement = LoginDatabase.GetPreparedStatement(LOGIN_UPD_BONUS_USED);
+    statement->setUInt32(0, accountId);
+
+    LoginDatabase.Execute(statement);
+
+    return;
+}
