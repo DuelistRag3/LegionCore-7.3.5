@@ -497,6 +497,44 @@ PersistentCharacterCleanFlags = 0
 
 #
 ###################################################################################################
+# SOLOCRAFT #
+#############
+#
+#     Solocraft.Enable
+#        Description: Solocraft trying to keep the balance in dungeons and raids, 
+#		 based on group size. It feels a little hacky, but good for low populated servers.
+#        Default:     0 (disabled)
+#                     1 (enabled)
+
+Solocraft.Enable = 1
+
+# Announce the module when the player logs in?
+
+Solocraft.Announce = 0
+
+# Difficulty Multipliers
+# Defaults: 5, 10, 15, 10, 25, 30, 40
+
+Solocraft.Dungeon = 5
+Solocraft.Heroic = 10
+Solocraft.Mythic = 15
+Solocraft.Raid10 = 10
+Solocraft.Raid25 = 25
+Solocraft.Raid30 = 30
+Solocraft.Raid40 = 40
+
+
+#
+#     LFG.SoloMode
+#        Description: This module allow to use LFG with 1-4 players.
+#                     Possible useful in offline play or on low populated servers.
+#        Default:     0 (disabled)
+#                     1 (enabled)
+
+LFG.SoloMode = 0
+
+#
+###################################################################################################
 
 ###################################################################################################
 # SERVER SETTINGS
